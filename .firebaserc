@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "plantcaresystem-268f4": {
+      "hosting": {
+        "plant_care_system": [
+          "plantcaresystem-268f4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "plantcaresystem-268f4"
+  }
+}
