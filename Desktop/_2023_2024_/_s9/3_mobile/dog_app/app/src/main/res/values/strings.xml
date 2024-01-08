@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">dog_app</string>
+    <!-- Page d'accueil -->
+
+    <string name="top_vote">VOTE</string>
+    <string name="top_breeds">BREEDS</string>
+    <string name="top_images_search">IMAGES/SEARCH</string>
+    <string name="top_favourites">FAVORITES</string>
+
+    <string name="info1">info1</string>
+    <string name="info2">info2</string>
+    <string name="info3">info3</string>
+    <string name="info4">info4</string>
+    <string name="info5">info5</string>
+
+
+</resources>
