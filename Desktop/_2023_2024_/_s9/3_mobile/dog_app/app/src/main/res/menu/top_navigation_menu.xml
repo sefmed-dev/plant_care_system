@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/vote_page"
+        android:title="@string/top_vote"
+        android:color="@color/white"
+        android:visible="true"/>
+    <item
+        android:id="@+id/breeds_page"
+        android:title="@string/top_breeds"
+        android:color="@color/white"
+        android:visible="true"/>
+    <item
+        android:id="@+id/images_page"
+        android:title="@string/top_images_search"
+        android:visible="true"/>
+    <item
+        android:id="@+id/favorites_page"
+        android:title="@string/top_favourites"
+        android:visible="true"/>
+</menu>
