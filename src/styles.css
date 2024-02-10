@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+.background-image {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-image: url('assets/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+  }
+  
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.marg-top-bot{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.marg-left{
+  width: 60%;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.element {
+  flex: 1;
+}

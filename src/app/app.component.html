@@ -1,7 +1,110 @@
-<div *ngFor = "let h of history">
-  <span
-    >Date : {{ h.date }} , Température : {{h.temperature}}, Humidité : {{h.sol_humidity}}
-  </span>
-  <br />
+<div class="background-image">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="../assets/logo.png" class="card-img-top card-img-top mx-auto d-block" alt="logo" style="width: 3%;">
+      <a class="navbar-brand" href="#">Plant App</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <div class="input-group marg-left">
+          <span class="input-group-text">Température, Humidité et Humidité du sol</span>
+          <input type="number" name="tempU" aria-label="Température" class="form-control" [(ngModel)]="tempU" (ngModelChange)="onValueChange()">
+          <input type="number" name="humiU" aria-label="Humidité" class="form-control" [(ngModel)]="humiU" (ngModelChange)="onValueChange()">
+          <input type="number" name="sol_humiU" aria-label="Humidité du sol" class="form-control" [(ngModel)]="sol_humiU" (ngModelChange)="onValueChange()">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container marg-top-bot">
+    <div class="row">
+      <div class="col-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body container1">
+            <h5 class="card-title element">Les données lié au plantes</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary element">Date: {{ realTime?.date }}</h6>
+            <p class="card-text element">Température: {{ realTime?.temperature }}</p>
+            <p class="card-text element">Humidité: {{ realTime?.humidity }}</p>
+            <p class="card-text element">Humidité du sol: {{ realTime?.sol_humidity }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-9 d-flex justify-content-center">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <div class="chart">
+              <canvas  id="MyChart1" >{{ chart1 }}</canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Activer l'arrosage ?</h5>
+          </div>
+          <img src="{{ linkArrosage }}" class="card-img-top card-img-top mx-auto d-block" alt="..." style="width: 150px; height: 150px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ var1 }}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-9 d-flex justify-content-center">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <div class="chart">
+              <canvas  id="MyChart2" >{{ chart2 }}</canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-3 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Ouvrir les fenêtres de la serre ?</h5>
+          </div>
+          <img src="{{ linkWindow }}" class="card-img-top card-img-top mx-auto d-block" alt="..." style="width: 150px; height: 150px;">
+          <div class="card-body">
+            <h5 id ="var2Container" class="card-title">{{ var2 }}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-9 d-flex justify-content-center">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <div class="chart">
+              <canvas  id="MyChart3" >{{ chart3 }}</canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-body-tertiary text-center text-lg-start coloring ">
+    <div class="text-center p-3">
+      © 2020 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+  </footer>
+  <footer class="bg-body-tertiary text-center text-lg-start coloring footer">
+    <div class="text-center p-3">
+      © 2024 Copyright :
+      <strong><i>Goumidi - Elasri - Lbazri</i></strong>
+    </div>
+  </footer>
 </div>
-<br/>
