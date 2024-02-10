@@ -1,9 +1,13 @@
 {
-  "hosting": [
-    {
-      "target": "plant_care_system",
-      "source": ".",
-      "frameworksBackend": {}
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west1"
     }
-  ]
+  }
 }
