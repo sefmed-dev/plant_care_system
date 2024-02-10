@@ -1,9 +1,0 @@
-{
-  "hosting": [
-    {
-      "target": "plant_care_system",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
-}
