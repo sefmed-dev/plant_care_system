@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   public chart3: any;
   public dates: any;
   public humidityData: any;
-  public sol_humiU: number = 45;
+  public sol_humiU: number = 25;
   public humiU: number = 70;
   public tempU: number = 27;
   public temperatureData: any;
@@ -119,7 +119,7 @@ export class AppComponent implements OnInit {
       this.linkWindow = "assets/no_action.jpg";
     }
 
-    if (this.realTime?.sol_humidity !== undefined && this.realTime?.sol_humidity > this.sol_humiU) {
+    if (this.realTime?.sol_humidity !== undefined && this.realTime?.sol_humidity < this.sol_humiU) {
       this.linkArrosage = "assets/arrosage_on.gif";
     }else{
       this.linkArrosage = "assets/no_action.jpg";
